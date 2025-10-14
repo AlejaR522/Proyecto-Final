@@ -1,0 +1,132 @@
+/* 🌿 Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #1b5e20;
+    background-color: #f1f8e9;
+}
+
+/* 🔹 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #2e7d32;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.navbar h1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #a5d6a7;
+}
+
+/* 🔹 Hero (sección principal) */
+.hero {
+    height: 85vh;
+    background: linear-gradient(
+    rgba(46, 125, 50, 0.7),
+    rgba(56, 142, 60, 0.7)
+    ),
+    url("/assets/463-8205.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* 🔹 Botones */
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-principal {
+    background-color: #81c784;
+    color: #1b5e20;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-principal:hover {
+    background-color: #66bb6a;
+    transform: scale(1.05);
+}
+
+/* 🔹 Sección informativa */
+.info {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.info h3 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    color: #4e4e4e;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 🔹 Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
