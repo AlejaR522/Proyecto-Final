@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Corredor Ecológico</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h2>Iniciar Sesión</h2>
-    
-            <form action="index.html" method="post">
-                <label for="usuario">Usuario:</label><br>
-                <input type="text" id="usuario" name="usuario" minlength="7" required ><br><br>
+<body class="login-page">
 
-                <label for="password">Contraseña:</label><br>
-                <input type="password" id="password" name="password" minlength="8" required><br><br>
+    <div class="login-container">
+        <h2>Bienvenido </h2>
+        <p class="login-subtitle">Inicia sesión para acceder al portal ecológico</p>
 
-                <button type="submit">Ingresar</button>
-            </form>
+        <form action="/index.html" method="post">
+            <div class="input-group">
+                <label for="usuario">Correo Electronico</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Ingresa tu Correo Electronico">
+            </div>
 
-        <p>¿No tienes cuenta? <a href="registro.html">Crear una cuenta</a></p>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required placeholder="••••••••">
+            </div>
+
+            <button type="submit" class="btn-login">Ingresar</button>
+        </form>
+
+        <p class="login-footer">
+            ¿No tienes cuenta?
+            <a href="registro.html">Crea una aquí</a>
+        </p>
     </div>
+
+    <footer class="login-footer-text">
+        © 2025 Corredor Ecológico | Conectando oportunidades verdes 🌱
+    </footer>
+
 </body>
 </html>
