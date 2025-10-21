@@ -1,12 +1,16 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+
+
 import cors from "cors";
 import express from "express";
-import dotenv from "dotenv";
 import AppRoutes from "../src/controllers/index.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
 
-dotenv.config();
+
 const app = express();
 
 // 🔧 Soporte para rutas de archivo (porque usamos ES Modules)
