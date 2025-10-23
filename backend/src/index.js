@@ -1,19 +1,15 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-
-
 import cors from "cors";
 import express from "express";
 import AppRoutes from "../src/controllers/index.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
-
-
 const app = express();
 
-// 🔧 Soporte para rutas de archivo (porque usamos ES Modules)
+// Soporte para rutas de archivo (porque usamos ES Modules)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

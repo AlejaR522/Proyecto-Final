@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import connection from "../db.js";
 
-// 🔹 REGISTRAR USUARIO
+// REGISTRAR USUARIO
 export const registerUser = async ({ nombre, email, password, tipo }) => {
   const [userExists] = await connection.promise().query(
     "SELECT * FROM usuarios WHERE email = ?",
@@ -23,7 +23,7 @@ export const registerUser = async ({ nombre, email, password, tipo }) => {
   return { message: "Usuario registrado correctamente" };
 };
 
-// 🔹 LOGIN
+// LOGIN
 export const loginUser = async (email, password) => {
   const [rows] = await connection.promise().query(
     "SELECT * FROM usuarios WHERE email = ?",
