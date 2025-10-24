@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import connection from "../db.js";
 
 // REGISTRAR USUARIO
-export const registerUser = async ({ nombre, email, password, tipo }) => {
+export const registerUser = async ({ nombre, email, password }) => {
   const [userExists] = await connection.promise().query(
     "SELECT * FROM usuarios WHERE email = ?",
     [email]
@@ -13,11 +13,12 @@ export const registerUser = async ({ nombre, email, password, tipo }) => {
     throw new Error("El correo ya está registrado.");
   }
 
+
   const hashedPassword = await bcrypt.hash(password, 10);
 
   await connection.promise().query(
-    "INSERT INTO usuarios (nombre, email, password, tipo) VALUES (?, ?, ?, ?)",
-    [nombre, email, hashedPassword, tipo]
+    "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)",
+    [nombre, email, hashedPassword]
   );
 
   return { message: "Usuario registrado correctamente" };

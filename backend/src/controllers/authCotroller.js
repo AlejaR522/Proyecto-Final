@@ -3,13 +3,13 @@ import { registerUser, loginUser } from "../services/authService.js";
 //  REGISTRO
 export const register = async (req, res) => {
   try {
-    const { nombre, email, password, tipo } = req.body;
+    const { nombre, email, password } = req.body;
 
-    if (!nombre || !email || !password || !tipo) {
+    if (!nombre || !email || !password ) {
       return res.status(400).json({ message: "Todos los campos son obligatorios." });
     }
 
-    const result = await registerUser({ nombre, email, password, tipo });
+    const result = await registerUser({ nombre, email, password });
     res.status(201).json(result);
   } catch (error) {
     res.status(500).json({ message: "Error en el registro", error: error.message });

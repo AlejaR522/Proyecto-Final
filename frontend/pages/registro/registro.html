@@ -15,7 +15,7 @@
             Únete al portal ecológico y empieza a conectar oportunidades verdes
         </p>
 
-        <form action="aqui va el back" method="post">
+        <form id="registerForm">
             <div class="input-groups">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
@@ -23,17 +23,18 @@
 
             <div class="input-groups">
                 <label for="email">Correo Electronico</label>
-                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
             </div>
-
+            
             <div class="input-groups">
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
             </div>
 
             <div class="input-groups">
-                <label for="confirmar">Confirmar contraseña</label>
-                <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar contraseña" required>
+                <label for="ConfirmPassword">Confirmar contraseña</label>
+                <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirmar contraseña" required>
+                <p id="mensaje" style="color: red; font-size: 13px; margin-top: 5px;"></p>
             </div>
 
             <button type="submit" class="btn-register">Crear cuenta</button>
@@ -45,8 +46,10 @@
     </div>
 
     <footer class="login-footers-text">
-        © 2025 Corredor Ecológico | Conectando oportunidades verdes 🌿
+        © 2025 Corredor Ecológico | Conectando oportunidades verdes 
     </footer>
+
+    <script src="ConeRegistro.js"></script> 
 
 </body>
 </html>
