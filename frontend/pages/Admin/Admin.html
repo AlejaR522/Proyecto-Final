@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - Corredor Ecológico</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2> Corredor Ecológico</h2>
+            <nav>
+                <a href="../Admin/Admin.html" class="active">Gestionar empleos</a>
+                <a href="../Admin/AdmiUsua.html">Usuarios</a>
+                <a href="../Admin/AdmiPostu.html">Postulaciones</a>
+                <a href="#">Reportes</a>
+            </nav>
+            <button class="logout-btn">Cerrar sesión</button>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Panel del Administrador</h1>
+                <button class="add-job-btn">+ Nuevo Empleo</button>
+            </header>
+
+            <section class="job-table-section">
+                <table class="job-table">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Empresa</th>
+                            <th>Ubicación</th>
+                            <th>Publicado</th>
+                            <th>Experiencia</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Ingeniero Ambiental</td>
+                            <td>EcoLife</td>
+                            <td>Bogotá</td>
+                            <td>20/10/2025</td>
+                            <td>1 Año </td>
+                            <td>
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Coordinador Ambiental</td>
+                            <td>EcoLife</td>
+                            <td>Bogotá</td>
+                            <td>20/10/2025</td>
+                            <td>2 Años</td>
+                            <td>
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+

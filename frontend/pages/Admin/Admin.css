@@ -1,0 +1,246 @@
+/* ==============================
+ESTILOS PANEL ADMIN - CORREDOR ECOLÓGICO (RESPONSIVE)
+   ============================== */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.admin-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ======== BARRA LATERAL ======== */
+.sidebar {
+    width: 250px;
+    background-color: #2e7d32;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #e8f5e9;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 6px 0;
+    transition: background 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.logout-btn {
+    background-color: #43a047;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+.main-content {
+    flex-grow: 1;
+    background-color: #f9fdf9;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 40px 50px;
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header h1 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.add-job-btn {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-job-btn:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+}
+
+/* ======== TABLA ======== */
+.job-table-section {
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 650px;
+}
+
+.job-table th, .job-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.job-table th {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+.job-table tr:hover {
+    background-color: #f1f8e9;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 6px;
+}
+
+.edit-btn {
+    background-color: #81c784;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #66bb6a;
+}
+
+.delete-btn {
+    background-color: #e57373;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #ef5350;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .sidebar nav {
+        display: flex;
+        gap: 10px;
+    }
+
+    .sidebar nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .logout-btn {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .main-content {
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .job-table {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .add-job-btn {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+

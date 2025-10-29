@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulaciones - Panel Administrador | Corredor Ecológico</title>
+    <link rel="stylesheet" href="AdminPostu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Corredor Ecológico</h2>
+            <nav>
+                <a href="../Admin/Admin.html">Gestionar empleos</a>
+                <a href="../Admin/AdmiUsua.html">Usuarios</a>
+                <a href="#" class="active">Postulaciones</a>
+                <a href="#">Reportes</a>
+            </nav>
+            <button class="logout-btn">Cerrar sesión</button>
+        </aside>
+
+            <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Postulaciones Recibidas</h1>
+                <input type="text" placeholder="Buscar postulante o empleo..." class="search-input">
+            </header>
+
+            <section class="table-section">
+                <table class="postulaciones-table">
+                <thead>
+                    <tr>
+                        <th>Postulante</th>
+                        <th>Empleo</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laura Mendoza</td>
+                        <td>Ingeniera Ambiental</td>
+                        <td>23/10/2025</td>
+                        <td><span class="estado pendiente">Pendiente</span></td>
+                            <td>
+                            <button class="view-btn">Ver</button>
+                            <button class="approve-btn">Aprobar</button>
+                            <button class="reject-btn">Rechazar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Juan Herrera</td>
+                        <td>Coordinador de Reciclaje</td>
+                        <td>20/10/2025</td>
+                        <td><span class="estado aprobado">Aprobado</span></td>
+                        <td>
+                            <button class="view-btn">Ver</button>
+                            <button class="approve-btn">Aprobar</button>
+                            <button class="reject-btn">Rechazar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Camila Torres</td>
+                        <td>Educadora Ambiental</td>
+                        <td>18/10/2025</td>
+                        <td><span class="estado rechazado">Rechazado</span></td>
+                        <td>
+                            <button class="view-btn">Ver</button>
+                            <button class="approve-btn">Aprobar</button>
+                            <button class="reject-btn">Rechazar</button>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
