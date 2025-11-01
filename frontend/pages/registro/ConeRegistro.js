@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const datos = { nombre, email, password, confirmar };
-
+        
         try {
             const response = await fetch("http://localhost:20094/api/empleos/register", {
                 method: "POST",

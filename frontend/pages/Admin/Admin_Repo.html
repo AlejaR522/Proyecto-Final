@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Panel Administrador | Corredor Ecológico</title>
+    <link rel="stylesheet" href="Admin_Repo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Corredor Ecológico</h2>
+            <nav>
+                <a href="../Admin/Admin.html">Gestionar empleos</a>
+                <a href="../Admin/Admin_Usua.html">Usuarios</a>
+                <a href="../Admin/Admin_Postu.html">Postulaciones</a>
+                <a href="../Admin/Admin_Repo.html" class="active">Reportes</a>
+            </nav>
+            <button class="logout-btn">Cerrar sesión</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Reportes del Sistema</h1>
+                <p>Resumen general de empleos, postulaciones y usuarios registrados</p>
+            </header>
+
+            <!-- Tarjetas de métricas -->
+            <section class="metrics">
+                <div class="card empleos">
+                    <h3>Empleos publicados</h3>
+                    <p>24</p>
+                </div>
+
+                <div class="card postulaciones">
+                    <h3>Postulaciones</h3>
+                    <p>87</p>
+                </div>
+
+                <div class="card aprobadas">
+                    <h3>Aprobadas</h3>
+                    <p>54</p>
+                </div>
+
+                <div class="card rechazadas">
+                    <h3>Rechazadas</h3>
+                    <p>33</p>
+                </div>
+            </section>
+
+    <!-- Tabla de reportes -->
+            <section class="table-section">
+                <h2>Historial de Actividad Reciente</h2>
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Acción</th>
+                            <th>Usuario</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>29/10/2025</td>
+                            <td>Nuevo empleo publicado</td>
+                            <td>Admin</td>
+                            <td><span class="status success">Exitoso</span></td>
+                        </tr>
+                        <tr>
+                            <td>27/10/2025</td>
+                            <td>Postulación aprobada</td>
+                            <td>Laura Mendoza</td>
+                            <td><span class="status success">Aprobada</span></td>
+                        </tr>
+                        <tr>
+                            <td>25/10/2025</td>
+                            <td>Usuario eliminado</td>
+                            <td>Juan Pérez</td>
+                            <td><span class="status danger">Eliminado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
