@@ -16,7 +16,6 @@
                 <a href="../Admin/Admin.html" class="active">Gestionar empleos</a>
                 <a href="../Admin/Admin_Usua.html">Usuarios</a>
                 <a href="../Admin/Admin_Postu.html">Postulaciones</a>
-                <a href="../Admin/Admin_Repo.html">Reportes</a>
             </nav>
             <button class="logout-btn">Cerrar sesión</button>
         </aside>
@@ -34,6 +33,7 @@
                         <tr>
                             <th>Título</th>
                             <th>Empresa</th>
+                            <th>Descripción</th>
                             <th>Ubicación</th>
                             <th>Publicado</th>
                             <th>Experiencia</th>
@@ -42,34 +42,46 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>Ingeniero Ambiental</td>
-                            <td>EcoLife</td>
-                            <td>Bogotá</td>
-                            <td>20/10/2025</td>
-                            <td>1 Año </td>
-                            <td>
-                                <button class="edit-btn">Editar</button>
-                                <button class="delete-btn">Eliminar</button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Coordinador Ambiental</td>
-                            <td>EcoLife</td>
-                            <td>Bogotá</td>
-                            <td>20/10/2025</td>
-                            <td>2 Años</td>
-                            <td>
-                                <button class="edit-btn">Editar</button>
-                                <button class="delete-btn">Eliminar</button>
-                            </td>
-                        </tr>
+                        <!-- Archivo de Js -->
                     </tbody>
                 </table>
             </section>
         </main>
+        <div class="modal" id="modal-empleo">
+            <div class="modal-content">
+                    <h2>Nuevo Empleo</h2>
+
+                    <input type="hidden" id="id_empleo">
+                    
+                    <label>Título</label>
+                    <input type="text" id="titulo" required>
+
+                    <label>Empresa</label>
+                    <input type="text" id="empresa" required>
+
+                    <label>Ubicación</label>
+                    <input type="text" id="ubicacion" required>
+
+                    <label for="descrip">Descripción</label>
+                    <textarea class="input-descrip" id="descrip" name="descrip"  required ></textarea>
+
+                    <label for="experiencia">Experiencia</label>
+                        <select id="experiencia" name="experiencia" required>
+                            <option value="">Selecciona los años de experiencia</option>
+                            <option value="1 año">1 año</option>
+                            <option value="2 años">2 años</option>
+                            <option value="3 años">3 años</option>
+                            <option value="4 años">4 años</option>
+                            <option value="5+ años">5 o más años</option>
+                        </select>
+                    <div class="modal-buttons">
+                        <button id="btnCancelar" class="cancel-btn">Cancelar</button>
+                        <button id="btnAceptar" class="accept-btn">Aceptar</button>
+                    </div>
+            </div>
+        </div>
     </div>
+    <script src="Admin.js"></script>
 </body>
 </html>
 

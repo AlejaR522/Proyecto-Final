@@ -17,7 +17,6 @@
                 <a href="../Admin/Admin.html">Gestionar empleos</a>
                 <a href="../Admin/Admin_Usua.html" class="active">Usuarios</a>
                 <a href="../Admin/Admin_Postu.html">Postulaciones</a>
-                <a href="../Admin/Admin_Repo.html">Reportes</a>
             </nav>
             <button class="logout-btn">Cerrar sesión</button>
         </aside>
@@ -26,7 +25,6 @@
         <main class="main-content">
             <header class="header">
                 <h1>Gestión de Usuarios</h1>
-                <button class="add-user-btn">+ Nuevo Usuario</button>
             </header>
 
             <section class="table-section">
@@ -40,32 +38,13 @@
                             <th>Acciones</th>
                         </tr>
                         </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Ana Torres</td>
-                                    <td>ana.torres@gmail.com</td>
-                                    <td>Administrador</td>
-                                    <td><span class="estado activo">Activo</span></td>
-                                    <td>
-                                        <button class="edit-btn">Editar</button>
-                                        <button class="delete-btn">Eliminar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Carlos Gómez</td>
-                                    <td>carlosg@correo.com</td>
-                                    <td>Usuario</td>
-                                    <td><span class="estado inactivo">Inactivo</span></td>
-                                    <td>
-                                        <button class="edit-btn">Editar</button>
-                                        <button class="delete-btn">Eliminar</button>
-                                    </td>
-                                </tr>
+                            <tbody id="tbodyUsuarios">
+                                <!-- Archivo de Js -->
                             </tbody>
                     </table>
             </section>
         </main>
     </div>
-
+    <script src="Admin_Usua.js"></script>
 </body>
 </html>

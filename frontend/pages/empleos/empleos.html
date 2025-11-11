@@ -7,88 +7,61 @@
     <link rel="stylesheet" href="empleos.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">Corredor Ecológico</div>
-        <nav class="nav">
-            <a href="../login/login.html"><b>Registrarse</b></a>
-        </nav>
-    </header>
-
-    <!-- MAIN -->
-    <main class="main-container">
-        <!-- FILTROS -->
-        <section class="filters">
-            <h2>Filtrar ofertas de empleo</h2>
-            <form>
-                <div class="filter-group">
-                    <label for="categoria">Categoría:</label>
-                    <select id="categoria" name="categoria">
-                        <option value="todas">Todas</option>
-                        <option value="administracion">Administración</option>
-                        <option value="medio-ambiente">Medio Ambiente</option>
-                        <option value="logistica">Logística</option>
-                        <option value="educacion">Educación</option>
-                    </select>
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">Corredor Ecológico</div>
+            <nav class="nav">
+                <a href="../login/login.html"><b>Registrarse</b></a>
+            </nav>
+            <!-- PERFIL -->
+            <div class="profile-menu">
+                <div class="profile-icon" id="profileToggle">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Perfil">
                 </div>
 
-                <div class="filter-group">
-                    <label for="ubicacion">Ubicación:</label>
-                    <select id="ubicacion" name="ubicacion">
-                        <option value="todas">Todas</option>
-                        <option value="bogota">Bogotá</option>
-                        <option value="medellin">Medellín</option>
-                        <option value="cali">Cali</option>
-                        <option value="cartagena">Cartagena</option>
-                    </select>
+                <div class="dropdown" id="dropdownMenu">
+                    <a href="#" id="subirCV">📄 Subir CV</a>
+                    <a href="#" id="cerrarSesion">🚪 Cerrar sesión</a>
                 </div>
-
-                <button type="submit" class="btn-filter">Filtrar</button>
-            </form>
-        </section>
-
-        <!-- JOBS -->
-        <section class="jobs">
-            <h2>Ofertas de empleo</h2>
-
-            <div class="job-card">
-                <h3>Coordinador Ambiental</h3>
-                <p><strong>Ubicación:</strong> Bogotá</p>
-                <p><strong>Categoría:</strong> Medio Ambiente</p>
-                <p class="job-desc">Coordinar proyectos de conservación y sostenibilidad en áreas protegidas.</p>
-                <a href="../login/login.html" class="btn-apply">Aplicar</a>
             </div>
+        </header>
 
-            <div class="job-card">
-                <h3>Asistente Administrativo</h3>
-                <p><strong>Ubicación:</strong> Medellín</p>
-                <p><strong>Categoría:</strong> Administración</p>
-                <p class="job-desc">Gestión de documentación y apoyo a proyectos internos.</p>
-                <a href="../login/login.html" class="btn-apply">Aplicar</a>
-            </div>
+        <!-- MAIN -->
+        <main class="main-container">
+            <!-- FILTROS -->
+            <section class="filters">
+                <h2>Filtrar ofertas de empleo</h2>
 
-            <div class="job-card">
-                <h3>Educador Ambiental</h3>
-                <p><strong>Ubicación:</strong> Cali</p>
-                <p><strong>Categoría:</strong> Educación</p>
-                <p class="job-desc">Realizar talleres y actividades educativas sobre conservación ambiental.</p>
-                <a href="../login/login.html" class="btn-apply">Aplicar</a>
-            </div>
+                <form id="formFiltro">
+                    <div class="filter-group">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Buscar por título...">
+                    </div>
 
-            <div class="job-card">
-                <h3>Logística de Proyectos</h3>
-                <p><strong>Ubicación:</strong> Cartagena</p>
-                <p><strong>Categoría:</strong> Logística</p>
-                <p class="job-desc">Apoyar la organización de recursos y transporte para proyectos ecológicos.</p>
-                <a href="../login/login.html" class="btn-apply">Aplicar</a>
-            </div>
-        </section>
-    </main>
+                    <div class="filter-group">
+                        <label for="ubicacion">Ubicación:</label>
+                        <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Bogotá">
+                    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2025 Corredor Ecológico. Todos los derechos reservados.</p>
-    </footer>
+                    <button type="submit" class="btn-filter">Filtrar</button>
+                </form>
+            </section>
+
+            <!-- JOBS -->
+            <section class="jobs">
+                <h2>Ofertas de empleo</h2>
+
+                <!-- Contenedor donde se cargan las tarjetas -->
+                <div id="jobContainer"></div>
+
+            </section>
+        </main>
+    </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2025 Corredor Ecológico. Todos los derechos reservados.</p>
+        </footer>
 </body>
 </html>
 

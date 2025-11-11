@@ -5,7 +5,19 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+/* El wrapper contiene header + main y ocupa el espacio disponible */
+.wrapper {
+    flex: 1;
+}
 /* BODY */
 body {
     background: linear-gradient(
@@ -85,7 +97,7 @@ body {
     margin-bottom: 5px;
 }
 
-.filters select {
+.filters input {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #c4c4c4;
@@ -171,6 +183,52 @@ body {
     margin-top: 50px;
     font-size: 0.9rem;
     box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+}
+
+.profile-menu {
+    position: relative;
+    margin-left: 20px;
+}
+
+.profile-icon img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* DESPLEGABLE */
+.dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    width: 160px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.dropdown a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background: #2e7d32;
+    color: white;
 }
 
 /* RESPONSIVE */
