@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("token", data.token);
 
             // Redirigimos a la página principal o dashboard
-            window.location.href = "../empleos/Jobhome.html";
+            window.location.href = "../empleos/empleos.html";
         } else {
             alert(`⚠️ ${data.message || "Credenciales incorrectas"}`);
         }
